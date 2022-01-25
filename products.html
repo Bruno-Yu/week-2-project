@@ -51,7 +51,7 @@
                       <!-- 對應is_enabled 三元函式或v-if v-else -->
                       <td width="100">
                         <span v-if="item.is_enabled" class="text-success"> 啟用</span>
-                        <span v-else> 未啟用</span>
+                        <span v-else class="text-danger"> 未啟用</span>
                       </td>
                       <!-- v-on 呈現單一產品資訊-->
                       <td width="120">
@@ -65,8 +65,8 @@
                   </template>
                 </tbody>
               </table>
-              <p>目前有 <span id="productCount">{{total}}</span> 項產品</p>
-              <hr>
+              <p>目前已啟用 <span id="productCount">{{total}}</span> 項產品</p>
+              <p>總共有 {{products.length}} 項產品</p>
             </div>
             <div class="col-lg-6">
               <template v-if="productDisplay.id">
